@@ -1,0 +1,74 @@
+{
+    "name": "andradedaniel/jwt-auth-consumer",
+    "description": "Pacote Laravel para validar JWTs em serviços consumidores",
+    "type": "library",
+    "keywords": ["laravel", "jwt", "authentication", "middleware"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Andrade"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "firebase/php-jwt": "^6.0",
+        "illuminate/auth": "^11.0",
+        "illuminate/http": "^11.0",
+        "illuminate/routing": "^11.0",
+        "illuminate/support": "^11.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.24.0",
+        "orchestra/testbench": "^9.0",
+        "peckphp/peck": "^0.1.3",
+        "pestphp/pest": "^4.1.0",
+        "pestphp/pest-plugin-type-coverage": "^4.0.2",
+        "phpstan/phpstan": "^2.1.26",
+        "rector/rector": "^2.1.7",
+        "symfony/var-dumper": "^7.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "SpunetGestao\\JwtAuthConsumer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SpunetGestao\\JwtAuthConsumer\\JwtAuthConsumerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "lint": "pint",
+        "refactor": "rector",
+        "test:type-coverage": "pest --type-coverage --exactly=100",
+        "test:typos": "peck",
+        "test:lint": "pint --test",
+        "test:unit": "pest --coverage --exactly=100",
+        "test:types": "phpstan",
+        "test:refactor": "rector --dry-run",
+        "test": [
+            "@test:lint",
+            "@test:type-coverage",
+            "@test:typos",
+            "@test:unit",
+            "@test:types",
+            "@test:refactor"
+        ]
+    }
+}
