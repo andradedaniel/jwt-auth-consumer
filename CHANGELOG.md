@@ -5,7 +5,11 @@ Todas as mudanças notáveis deste pacote serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/spec/v2.0.0.html).
 
-### [1.1.0]
+### [1.1.1] - 2025-12-02
+
+- **Adicionado**: Método `getMorphClass()` na classe `JwtUser` para compatibilidade com `owen-it/laravel-auditing`.
+
+### [1.1.0] - 2025-12-02
 
 - **Adicionado**: Suporte para Laravel 12.x.
 - **Alterado**: Atualizado `orchestra/testbench` para suportar versões 9.x e 10.x.

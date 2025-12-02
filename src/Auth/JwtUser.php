@@ -67,6 +67,15 @@ class JwtUser implements Arrayable, AuthenticatableContract, JsonSerializable
     }
 
     /**
+     * Get the class name for polymorphic relations.
+     * Used for owen-it/laravel-auditing package compatibility.
+     */
+    public function getMorphClass(): string
+    {
+        return get_class($this);
+    }
+
+    /**
      * @return array<string, mixed>
      */
     public function getClaims(): array
