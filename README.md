@@ -2,6 +2,8 @@
 
 Pacote Laravel para validar JWTs emitidos por um serviço central de autenticação e disponibilizar o usuário autenticado no contexto de aplicações consumidoras.
 
+**Compatibilidade:** Laravel 11.x e 12.x | PHP 8.2+
+
 ### Instalação
 
 Instale o pacote diretamente do Packagist via Composer (recomendado fixar a versão principal):

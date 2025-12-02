@@ -5,6 +5,11 @@ Todas as mudanças notáveis deste pacote serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/spec/v2.0.0.html).
 
+### [1.1.0]
+
+- **Adicionado**: Suporte para Laravel 12.x.
+- **Alterado**: Atualizado `orchestra/testbench` para suportar versões 9.x e 10.x.
+
 ### [1.0.0] - 2025-11-20
 
 - **Adicionado**: Pacote inicial `andradedaniel/jwt-auth-consumer`.
