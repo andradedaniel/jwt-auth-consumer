@@ -32,7 +32,7 @@ it('throws when signature is invalid', function (): void {
 
     $token = JWT::encode(
         createPayload(),
-        'invalid-secret',
+        'invalid-secret-key-at-least-32-bytes!',
         'HS256'
     );
 
@@ -73,7 +73,7 @@ function createToken(array $overrides = []): string
 {
     return JWT::encode(
         array_merge(createPayload(), $overrides),
-        'test-secret',
+        'test-secret-key-at-least-32-bytes!!',
         'HS256'
     );
 }

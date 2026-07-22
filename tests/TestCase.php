@@ -18,7 +18,7 @@ abstract class TestCase extends Orchestra
 
     protected function defineEnvironment($app): void
     {
-        $app['config']->set('jwt-auth-consumer.secret', 'test-secret');
+        $app['config']->set('jwt-auth-consumer.secret', 'test-secret-key-at-least-32-bytes!!');
         $app['config']->set('jwt-auth-consumer.algo', 'HS256');
         $app['config']->set('jwt-auth-consumer.leeway', 0);
         $app['config']->set('jwt-auth-consumer.user_claims', [

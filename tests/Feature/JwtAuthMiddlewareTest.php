@@ -66,7 +66,7 @@ it('rejects expired tokens', function (): void {
 it('rejects tokens with invalid signature', function (): void {
     $token = JWT::encode(
         basePayload(),
-        'wrong-secret',
+        'wrong-secret-key-at-least-32-bytes!!',
         'HS256'
     );
 
@@ -158,7 +158,7 @@ function makeToken(array $overrides = []): string
 {
     return JWT::encode(
         array_merge(basePayload(), $overrides),
-        'test-secret',
+        'test-secret-key-at-least-32-bytes!!',
         'HS256'
     );
 }
